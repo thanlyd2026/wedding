@@ -65,19 +65,19 @@ h4 {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     /* Custom background image */
-    background-image: url('images/Ktima_Panagiotopoulou.jpg');
+    background-image: url('images/invitation_top.png');
     background-size: cover;
-    background-position: center;
+    background-position: center -370px;
     background-attachment: fixed;
     /* Parallax effect */
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 /* Dark overlay to make text readable */
@@ -87,7 +87,8 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(132, 146, 120, 0.35);
+    /* background: rgba(132, 146, 120, 0.35); */
+        background: rgba(175, 185, 167, 0.35);
     /* Subtle sage tint overlay */
     z-index: 1;
 }
@@ -97,6 +98,7 @@ h4 {
     z-index: 2;
     padding: 2rem;
     max-width: 800px;
+    margin-top: 35vh; /* Pushes text down so the top of the background image is visible */
 }
 
 .pre-title {
@@ -146,6 +148,10 @@ h4 {
 
 /* Responsive constraints */
 @media (max-width: 768px) {
+    .hero {
+        background-position: center center;
+    }
+
     .title {
         font-size: 3.5rem;
     }
